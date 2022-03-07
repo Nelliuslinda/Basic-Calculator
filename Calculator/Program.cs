@@ -4,22 +4,22 @@ namespace Calculator
 {
     internal class Program
     {
-        static int Sum(int x, int y)
+        public static int Sum(int x, int y)
         {
             return x + y;           
         }
 
-        static int Diff(int x, int y)
+        public static int Diff(int x, int y)
         {
             return x - y;
         }
 
-        static int Multiply(int x, int y)
+        public static int Multiply(int x, int y)
         {
             return x * y;
         }
 
-        static int Div(int x, int y)
+        public static int Div(int x, int y)
         {
             return x / y;
         }
@@ -63,9 +63,6 @@ namespace Calculator
                     int num8 = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("\nThe answer is: " + Div(num7, num8));
                     break;
-
-                //default:
-                //    Console.WriteLine("Something went wrong...Try again");
 
             }
 
