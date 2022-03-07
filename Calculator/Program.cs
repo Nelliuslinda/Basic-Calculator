@@ -4,23 +4,72 @@ namespace Calculator
 {
     internal class Program
     {
+        static int Sum(int x, int y)
+        {
+            return x + y;           
+        }
+
+        static int Diff(int x, int y)
+        {
+            return x - y;
+        }
+
+        static int Multiply(int x, int y)
+        {
+            return x * y;
+        }
+
+        static int Div(int x, int y)
+        {
+            return x / y;
+        }
         static void Main(string[] args)
         {
-            do
+            //Start menu for Calculator
+
+            Console.WriteLine("Welcome to the Calculator App\n\n 1. Sum \n 2. Subtraction\n 3. Multiplication\n 4. Division\n Choose an option to start");
+            int opt = Convert.ToInt32(Console.ReadLine());
+
+            switch (opt)
             {
-                Console.WriteLine("x = ");
-                string str = Console.ReadLine();
-                if (str == "exit") { break; }
+                case 1:
+                    Console.WriteLine("\nInsert the first number:");
+                    int num1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Insert the second number:");
+                    int num2 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("\nThe answer is: " + Sum(num1,num2));
+                    break;
 
-                int x = Convert.ToInt32(str);
+                case 2:
+                    Console.WriteLine("\nInsert the first number:");
+                    int num3 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Insert the second number:");
+                    int num4 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("\nThe answer is: " + Diff(num3, num4));
+                    break;
 
-                Console.WriteLine("y = ");
-                int y = Convert.ToInt32(Console.ReadLine());
+                case 3:
+                    Console.WriteLine("\nInsert the first number:");
+                    int num5 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Insert the second number:");
+                    int num6 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("\nThe answer is: " + Multiply(num5, num6));
+                    break;
 
-                int sum = x + y;
-                Console.WriteLine("Result: {0}", sum);
+                case 4:
+                    Console.WriteLine("\nInsert the first number:");
+                    int num7 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Insert the second number:");
+                    int num8 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("\nThe answer is: " + Div(num7, num8));
+                    break;
+
+                //default:
+                //    Console.WriteLine("Something went wrong...Try again");
+
             }
-            while (true);
+
+
         }
     }
 }
